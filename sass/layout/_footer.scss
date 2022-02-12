@@ -5,13 +5,42 @@
 }
 
 .footer__general {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.footer__nav {
+  @media screen and (min-width: 768px) {
+    margin-left: 76px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+.footer-tablet {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .footer__item {
-  margin-bottom: 9px;
-  &:last-child {
-    margin-bottom: 0;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 480px) {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -31,6 +60,7 @@
 }
 
 .footer__link {
+  text-align: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -53,11 +83,19 @@
   color: var(--white-title-color);
   margin-bottom: 20px;
   text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .add__icon {
-  padding-bottom: 30px;
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .add__social__link {
@@ -73,7 +111,9 @@
 }
 
 .footer__subscribe {
-  margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .footer__title {
@@ -84,14 +124,18 @@
   text-transform: uppercase;
   color: var(--white-title-color);
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer__form__input {
-  width: 358px;
+  width: 90vw;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding-left: 16px;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -105,11 +149,22 @@
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .footer__form__field {
-  display: flex;
-  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer__submit__icon {

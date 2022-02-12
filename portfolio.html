@@ -16,29 +16,71 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
-<body>
-    <header class="header">
-        <div class="container header__container">
-            <nav class="site-nav">
-                <a class="link logo logo--header" lang="en" href="./"><span class="logo__accent">Web</span>Studio</a>
-                <ul class="list site-list">
-                    <li class="site-nav__item"><a class="link site-nav__link" href="./index.html">Студия</a></li>
-                    <li class="site-nav__item"><a class="link site-nav__link current" href="./portfolio.html">Портфолио</a></li>
-                    <li class="site-nav__item"><a class="link site-nav__link" href="">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="connect site-connect">
-                <li><a class="link connect__link connect__mail" href="mailto:info@devstudio.com"><svg
-                            class="connect__link-icon" width="16" height="12">
-                            <use href="./image/icons.svg#icon-envelope-hover-1"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li><a class="link connect__link" href="tel:+380961111111"><svg class="connect__link-icon" width="10"
-                            height="16">
-                            <use href="./image/icons.svg#icon-smartphone-1"></use>
-                        </svg>+38 096 111 11 11</a></li>
+<header class="header">
+    <div class="container header__container">
+        <a class="link logo logo--header" lang="en" href="./"><span class="logo__accent">Web</span>Studio</a>
+        <nav class="site-nav">
+            <ul class="list site-list">
+                <li class="site-nav__item"><a class="link site-nav__link current" href="./index.html">Студия</a></li>
+                <li class="site-nav__item"><a class="link site-nav__link" href="./portfolio.html">Портфолио</a></li>
+                <li class="site-nav__item"><a class="link site-nav__link" href="">Контакты</a></li>
             </ul>
+        </nav>
+        <ul class="connect site-connect">
+            <li><a class="link connect__link connect__mail" href="mailto:info@devstudio.com"><svg
+                        class="connect__link-icon" width="16" height="12">
+                        <use href="./image/icons.svg#icon-envelope-hover-1"></use>
+                    </svg>info@devstudio.com</a></li>
+            <li><a class="link connect__link" href="tel:+380961111111"><svg class="connect__link-icon" width="10"
+                        height="16">
+                        <use href="./image/icons.svg#icon-smartphone-1"></use>
+                    </svg>+38 096 111 11 11</a></li>
+        </ul>
+        <button type="button" class="menu-open-btn" data-menu-open><svg class="menu-icon" width="40" height="40">
+                <use href="./image/icons.svg#icon-menu_40px-1"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+            <div class="mob-menu-top">
+                <button type="button" class="menu-close-btn" data-menu-close>
+                    <svg class="menu-icon" width="40" height="40">
+                        <use href="./image/icons.svg#icon-close_40px-1"></use>
+                    </svg>
+                </button>
+                <ul class="list mob-menu-list">
+                    <li class="mob-menu-list__item"><a class="link mob-menu-list__link" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mob-menu-list__item"><a class="link mob-menu-list__link"
+                            href="./portfolio.html">Портфолио</a></li>
+                    <li class="mob-menu-list__item"><a class="link mob-menu-list__link" href="">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="mob-menu-bottom">
+                <div class="mob-connect mob-menu__connect">
+                    <li><a class="link mob-connect__tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li><a class="link mob-connect__mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </div>
+                <ul class="list mob-social">
+                    <li class="mob-social__item">
+                        <a class="link mob-social__link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </li>
+                    <li class="mob-social__item">
+                        <a class="link mob-social__link" href="" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    </li>
+                    <li class="mob-social__item">
+                        <a class="link mob-social__link" href="" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </li>
+                    <li class="mob-social__item">
+                        <a class="link mob-social__link" href="" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </div>
+    </div>
+</header>
     <main>
         <section class="filter">
             <div class="container">
@@ -51,26 +93,69 @@
                     <li><button type="button" class="filter__btn">Маркетинг</button></li>
                 </ul>
             </div>
-        </section>
+        </section> 
         <section class="box">
             <div class="container">
                 <h2 hidden>Наши работы</h2>
                 <ul class="list box__list">
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio1img.jpg" alt="фото компьютера" width="370" height="294">
+                        <div class="box__img">
+                            <picture>
+                                <source srcset="
+                                            ./image/portfolio1-desk1x.jpg 1x,
+                                            ./image/portfolio1-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio1-tab1x.jpg 1x,
+                                            ./image/portfolio1-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio1-mob1x.jpg 1x,
+                                            ./image/portfolio1-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio1-desk1x" alt="фото компьютера" />
+                            </picture>
                         <p class="box__text">Технокряк это современная площадка распространения коронавируса.Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
                         </div>
                         <h3 class="box__title">Технокряк</h3>
                         <p class="box__after__title">Веб-сайт</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio2img.jpg" alt="фото баскетболистов" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio2-desk1x.jpg 1x,
+                                            ./image/portfolio2-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio2-tab1x.jpg 1x,
+                                            ./image/portfolio2-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio2-mob1x.jpg 1x,
+                                            ./image/portfolio2-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio2-desk1x" alt="фото баскетболистов" />
+                            </picture>
                         <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p></div>
                         <h3 class="box__title">Постер New Orlean vs Golden Star</h3>
                         <p class="box__after__title">Дизайн</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio3img.jpg" alt="логотип ресторана" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio3-desk1x.jpg 1x,
+                                            ./image/portfolio3-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio3-tab1x.jpg 1x,
+                                            ./image/portfolio3-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio3-mob1x.jpg 1x,
+                                            ./image/portfolio3-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio3-desk1x" alt="логотип ресторана" />
+                            </picture>
                             <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus
                                 corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p>
                         </div>
@@ -78,7 +163,21 @@
                         <p class="box__after__title">Приложение</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio4img.jpg" alt="фото наушников" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio4-desk1x.jpg 1x,
+                                            ./image/portfolio4-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio4-tab1x.jpg 1x,
+                                            ./image/portfolio4-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio4-mob1x.jpg 1x,
+                                            ./image/portfolio4-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio4-desk1x" alt="фото наушников" />
+                            </picture>
                             <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus
                                 corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p>
                         </div>
@@ -86,31 +185,101 @@
                         <p class="box__after__title">Маркетинг</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio5img.jpg" alt="фото двух боксов" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio5-desk1x.jpg 1x,
+                                            ./image/portfolio5-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio5-tab1x.jpg 1x,
+                                            ./image/portfolio5-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio5-mob1x.jpg 1x,
+                                            ./image/portfolio5-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio5-desk1x" alt="фото компьютера" />
+                            </picture>
                         <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p></div>
                         <h3 class="box__title">Проект Boxes</h3>
                         <p class="box__after__title">Приложение</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio6img.jpg" alt="фото баскетболистов" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio6-desk1x.jpg 1x,
+                                            ./image/portfolio6-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio6-tab1x.jpg 1x,
+                                            ./image/portfolio6-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio6-mob1x.jpg 1x,
+                                            ./image/portfolio6-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio6-desk1x" alt="фото компьютера" />
+                            </picture>
                         <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p></div>
                         <h3 class="box__title">Inspiration has no Borders</h3>
                         <p class="box__after__title">Веб-сайт</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio7img.jpg" alt="фото баскетболистов" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio7-desk1x.jpg 1x,
+                                            ./image/portfolio7-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio7-tab1x.jpg 1x,
+                                            ./image/portfolio7-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio7-mob1x.jpg 1x,
+                                            ./image/portfolio7-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio7-desk1x" alt="разворот журнала" />
+                            </picture>
                         <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p></div>
                         <h3  class="box__title">Издание Limited Edition</h3>
                         <p class="box__after__title">Дизайн</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio8img.jpg" alt="фото баскетболистов" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio8-desk1x.jpg 1x,
+                                            ./image/portfolio8-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio8-tab1x.jpg 1x,
+                                            ./image/portfolio8-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio8-mob1x.jpg 1x,
+                                            ./image/portfolio8-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio8-desk1x" alt="бирка проекта лаб" />
+                            </picture>
                         <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p></div>
                         <h3 class="box__title">Проект LAB</h3>
                         <p class="box__after__title">Маркетинг</p>
                     </li>
                     <li class="box__item">
-                        <div class="box__img"><img src="./image/portfolio9img.jpg" alt="фото баскетболистов" width="370" height="294">
+                        <div class="box__img"><picture>
+                                <source srcset="
+                                            ./image/portfolio9-desk1x.jpg 1x,
+                                            ./image/portfolio9-desk2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                                <source srcset="
+                                            ./image/portfolio9-tab1x.jpg 1x,
+                                            ./image/portfolio9-tab2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                                <source srcset="
+                                            ./image/portfolio9-mob1x.jpg 1x,
+                                            ./image/portfolio9-mob2x.jpg 2x
+                                        " media="(min-width: 320px)" />
+                                <img src="./image/portfolio9-desk1x" alt="фото компьютера" />
+                            </picture>
                         <p class="box__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium necessitatibus corrupti aspernatur earum id eveniet voluptates error consequatur cumque unde dolorum reiciendis doloribus</p></div>
                         <h3 class="box__title">Growing Business</h3>
                         <p class="box__after__title">Приложение</p>
@@ -121,51 +290,53 @@
     </main>
         <footer class="footer">
             <div class="footer__general container">
-                <div class="footer__nav">
-                    <a class="link logo footer__logo" lang="en" href="./"><span class="logo__accent">Web</span>Studio</a>
-                    <address>
-                        <ul class="list footer-list">
-                            <li class="footer__item">
-                                <a class="link footer__address" href="https://goo.gl/maps/C4mNJaZZMFKMusJf6" target="_blank"
-                                    rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
+                <div class="footer-tablet">
+                    <div class="footer__nav">
+                        <a class="link logo logo--footer" lang="en" href="./"><span class="logo__accent">Web</span>Studio</a>
+                        <address>
+                            <ul class="list footer-list">
+                                <li class="footer__item">
+                                    <a class="link footer__address" href="https://goo.gl/maps/C4mNJaZZMFKMusJf6" target="_blank"
+                                        rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a class="link footer__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a class="link footer__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="add__icon">
+                        <h2 class="add">присоединяйтесь</h2>
+                        <ul class="social list">
+                            <li class="social__item">
+                                <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
+                                        height="20">
+                                        <use href="./image/icons.svg#icon-instagram-2-1"></use>
+                                    </svg></a>
                             </li>
-                            <li class="footer__item">
-                                <a class="link footer__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            <li class="social__item">
+                                <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
+                                        height="20">
+                                        <use href="./image/icons.svg#icon-twitter-1-1"></use>
+                                    </svg></a>
                             </li>
-                            <li class="footer__item">
-                                <a class="link footer__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            <li class="social__item">
+                                <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
+                                        height="20">
+                                        <use href="./image/icons.svg#icon-facebook-1-1"></use>
+                                    </svg></a>
+                            </li>
+                            <li class="social__item">
+                                <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
+                                        height="20">
+                                        <use href="./image/icons.svg#icon-linkedin-1-1"></use>
+                                    </svg></a>
                             </li>
                         </ul>
-                    </address>
-                </div>
-                <div class="add__icon">
-                    <h2 class="add">присоединяйтесь</h2>
-                    <ul class="social list">
-                        <li class="social__item">
-                            <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
-                                    height="20">
-                                    <use href="./image/icons.svg#icon-instagram-2-1"></use>
-                                </svg></a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
-                                    height="20">
-                                    <use href="./image/icons.svg#icon-twitter-1-1"></use>
-                                </svg></a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
-                                    height="20">
-                                    <use href="./image/icons.svg#icon-facebook-1-1"></use>
-                                </svg></a>
-                        </li>
-                        <li class="social__item">
-                            <a href="" class="social__link add__social__link"><svg class="add__social__icon" width="20"
-                                    height="20">
-                                    <use href="./image/icons.svg#icon-linkedin-1-1"></use>
-                                </svg></a>
-                        </li>
-                    </ul>
+                    </div>
                 </div>
                 <div class="footer__subscribe">
                     <p class="footer__title">Подпишитесь на рассылку</p>
@@ -175,12 +346,14 @@
                             <button type="submit" class="button button__footer">Подписаться<span><svg
                                         class="footer__submit__icon" width="24" height="24">
                                         <use href="./image/icons.svg#icon-icon-send-1"></use>
-                                    </svg></span></button>
+                                    </svg></span>
+                                </button>
                         </div>
                     </form>
                 </div>
             </div>
         </footer>
+    <script src="./mobile-menu.js"></script>
     </body>
     
     </html>

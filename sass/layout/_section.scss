@@ -1,4 +1,7 @@
 .section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
   padding-bottom: 94px;
 }
 
@@ -14,6 +17,7 @@
 
 .section__list {
   display: flex;
+  height: 294px;
 }
 
 .section__item {
@@ -21,10 +25,15 @@
   margin-right: 30px;
 }
 
+.section__item:last-child {
+  width: 370px;
+  margin-right: 0px;
+}
+
 .section__item-wrap {
   position: relative;
-  height: 294px;
 }
+
 .section__item-text {
   position: absolute;
   font-weight: 700;

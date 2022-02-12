@@ -1,31 +1,48 @@
 .customers {
   background-color: #ffffff;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .customers__title {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
+  @include font(700, 28, 1.18, 0.03em);
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include font(700, 36, 1.17, 0.03em);
+  }
 }
 
 .clients {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.clients__item {
+  width: calc(100% / 2 - 30px);
+  margin-left: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 6 - 30px);
+  }
 }
 
 .clients__item + .clients__item {
-  margin-left: 30px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .clients__link {
-  width: 170px;
   height: 92px;
   background-color: #ffffff;
   justify-content: center;

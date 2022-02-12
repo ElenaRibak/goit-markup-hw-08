@@ -1,17 +1,27 @@
 .filter {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
 }
 
 .filter__list {
   display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .filter__btn {
   display: inline-block;
+  margin-bottom: 15px;
   margin-right: 8px;
   background-color: var(--button-color);
   border-radius: 4px;

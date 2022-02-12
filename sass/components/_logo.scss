@@ -19,11 +19,18 @@
 
 .logo--header {
   color: var(--header-color);
-  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .logo--footer {
   display: flex;
   color: var(--white-title-color);
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
 }

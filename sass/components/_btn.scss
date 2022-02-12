@@ -11,8 +11,10 @@
   color: #ffffff;
   background: var(--accent-color);
   border-radius: 4px;
-  cursor: pointer;
   border: none;
+  @media screen and (min-width: 1200px) {
+    cursor: pointer;
+  }
 }
 
 .button--hero {
@@ -23,8 +25,15 @@
 }
 
 .button__footer {
-  margin-left: 12px;
   padding: 10px 29px;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 
 .button__submit {
