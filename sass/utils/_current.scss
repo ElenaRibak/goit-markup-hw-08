@@ -9,6 +9,12 @@
     border-radius: 2px;
     position: absolute;
     left: 0;
-    bottom: -34px;
+    bottom: -35px;
+    @media screen and (min-width: 768px) {
+      bottom: -32px;
+    }
+    @media screen and (min-width: 1200px) {
+      bottom: -35px;
+    }
   }
 }

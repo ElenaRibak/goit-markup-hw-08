@@ -4,6 +4,10 @@
   border-bottom: 1px solid #ececec;
   padding-top: 16px;
   padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
   @media screen and (min-width: 1200px) {
     padding-top: 24px;
     padding-bottom: 25px;
@@ -94,10 +98,17 @@
   &:focus .connect__link-icon {
     fill: var(--accent-color);
   }
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 .connect__link-icon {
   margin-right: 10px;
+  margin-bottom: -6px;
   fill: #757575;
   align-items: center;
   transition-property: fill;
@@ -110,6 +121,10 @@
 }
 
 .connect__mail {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    margin-bottom: 5px;
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
   }
@@ -120,7 +135,7 @@
 }
 
 .menu-open-btn {
-  margin-right: 1px;
+  margin-left: auto;
   border: none;
   background-color: #ffffff;
   &:hover,

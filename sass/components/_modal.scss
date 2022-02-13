@@ -8,12 +8,10 @@
 
 .modal {
   width: 90vw;
-  height: 90vh;
   background-color: #fff;
   border-radius: 4px;
   position: absolute;
   top: 10px;
-  // top: 50%;
   left: 50%;
   transform: translate(-50%);
   padding: 40px;
@@ -24,6 +22,13 @@
   @media screen and (min-width: 768px) {
     width: 528px;
     height: 581px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
   }
 }
 
@@ -40,16 +45,16 @@
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  @media screen and (min-width: 1200px) {
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: #2196f3;
   }
-  &:hover {
-    @media screen and (min-width: 1200px) {
-      cursor: pointer;
-      fill: #2196f3;
-    }
-  }
+}
+
+.modal-close {
+  cursor: pointer;
 }
 
 .is-hidden {
